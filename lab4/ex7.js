@@ -31,6 +31,8 @@ while(counter <= 6) {
             } else {
                 alert("Sorry, wrong number. Try again. Hint: It is higher than your current guess");
             }
+        }else{
+            alert("Sorry, wrong number. That was your final guess");
         }
         // Increment the counter for the next attempt
         counter++;

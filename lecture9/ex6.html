@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Exercise 6</title>
+    </head>
+    <body>
+        <a href="index.html">Lecture 9 Home Page</a><br><br>
+        <h1>Lotto</h1>
+        <label for="numbers">Please enter how many numbers per line in the lotto:</label> 
+        <input id="numbers"> <br><br>
+        
+        <label for="range">Please enter how many numbers you can coose from:</label> 
+        <input id="range"> <br><br>
+
+        <label for="lines">Please enter how many lines of numbers you want generated:</label> 
+        <input id="lines"> <br><br>
+
+        <button type="button" onClick="getLottoNumbers()">Quick Pick</button>
+
+        <p id="output"></p>
+
+        <h3 id="odds"></h3>
+        <script src="ex6.js"></script>
+    </body>
+</html>

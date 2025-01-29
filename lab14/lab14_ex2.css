@@ -1,0 +1,48 @@
+.wrapper{
+    width: 800px;
+    border: 1px solid red;
+    margin: auto;
+    border: 10px dashed green;
+    border-radius: 20px;
+    padding: 20px;
+    background-color: lightblue;
+}
+
+#header{
+    background-color: black;
+    padding: 10px;
+}
+
+a{
+    color: white;
+    margin-right: 10px;
+}
+.sections{
+    padding-top: 10px;
+    padding-left: 7px;
+    padding-bottom: 10px;
+    margin-top: 20px;
+}
+#section1{
+    color: red;
+    background-color: lightyellow;
+}
+#section2{
+    background-color: white;
+    border-radius: 30px;
+}
+#section3{
+    background-color: orange;
+    color: white;
+    border-bottom-right-radius: 30px;
+    border-top-left-radius: 30px;
+    border: 5px solid black;
+}
+#section4{
+    background-image: linear-gradient(red, green, blue);
+    border-radius: 0px 30px 0px 30px;
+}
+#section5{
+    background-color: lightyellow;
+    border-radius: 30px 0px 30px 0px;
+}

@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+	<head>
+	  <meta charset="utf-8">
+	  <meta name="viewport" content="width=device-width, initial-scale=1" />		
+	  <title>Lecture 15 - Example 2</title>
+	  <style>
+		.container > div{
+			border: 1px solid red;
+		}
+		.container{
+			display: grid;
+			grid-template-columns: 1fr 1fr 1fr;
+			grid-template-rows: 50px 200px 200px 50px;
+			gap: 2px;
+		}
+		.hf{
+			grid-column: span 3;
+		}
+		#box2{
+			grid-row: span 2;
+		}
+		
+
+	  </style>
+	</head>
+
+	<body>
+		<div class="container">
+			<div class="hf">1</div>
+			<div id="box2">2</div>
+			<div>3</div>
+			<div>4</div>
+			<div>5</div>
+			<div>6</div>
+			<div class="hf">7</div>
+		</div>
+		<a href="index.html">Lecture 15 Home Page</a><br><br>
+	</body>
+</html>
+
+
+

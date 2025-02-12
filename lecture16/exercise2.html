@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+	<head>
+	  <meta charset="utf-8">
+	  <meta name="viewport" content="width=device-width, initial-scale=1" />		
+	  <title>Exercise 2</title>
+	  <link rel="preconnect" href="https://fonts.googleapis.com">
+	  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap" rel="stylesheet">	
+	  <style>
+		*{
+			background-color: lightyellow;
+			color: blue; 	
+		}	
+		img{
+			width: 150px;
+			height: 120px;
+			border: 5px double green;
+			box-shadow: 5px 5px rgb(200, 197, 197);
+		}
+		p{
+			font-family: "Dancing Script", serif;
+  			font-optical-sizing: auto;
+  			font-weight:700;
+  			font-style: normal;
+		}
+		#para3{
+			color: green;
+		}
+		#link1{
+			background-color: blue;
+			color: lightyellow;
+			text-decoration: none;
+			padding: 5px;
+			border-radius: 10px;
+		}
+		#link1:hover{
+			background-color: lightyellow;
+			color: blue; 
+		}
+		.container{
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			gap: 5px;
+		}
+		.span2{
+			grid-column: span 2;
+			text-align: center;
+		}
+		div > div{
+			border: 2px dotted;
+			padding: 5px;	
+		}
+	  </style>
+	</head>
+
+	<body>
+		<div class="container">
+			<div class="span2">
+				<h1>Two famous Football Players</h1>
+			</div>
+			<div>
+				<h2>Socrates</h2>
+				<img src="socrates.jpg" alt="socrates">
+				<p>Socrates was a great player. Scored lots goals for Brazil and various football clubs.</p>
+				<p>Socrates was also a dentist.</p>
+			</div>
+			<div>
+				<h2>Zico</h2>
+				<img src="zico.jpg" alt="zico">
+				<p id="para3">Zico was also a great player. Lots of flair and skill and scored loads of spectacturlar goals.</p>
+			</div>
+			<div class="span2">
+				<h3>Click <a id="link1" href="https://www.rte.ie/">here</a> for more on these and other players.</h3>
+			</div>
+		</div>
+		<a href="index.html">Lecture 16 Home Page</a><br><br>		
+	</body>
+</html>
+
+
+

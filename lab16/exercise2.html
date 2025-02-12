@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+	<head>
+	  <meta charset="utf-8">
+	  <meta name="viewport" content="width=device-width, initial-scale=1" />		
+	  <title>Exercise 2</title>
+	  
+	  <style>
+		div > div{
+			/* border: 1px solid green; */
+			padding: 5px;
+		}
+		.container{
+			display: grid;
+			grid-template-columns: 1fr 2fr;
+			grid-template-rows: 30px 80px 60px 100px 30px;
+			gap: 5px;
+			width: 40%;
+			margin: auto;
+		}
+		#span2{
+			grid-column: span 2;
+		}
+		#rspan2{
+			grid-row: span 2;
+		}
+		.even{
+			background-color: lightgrey;
+			color: white;
+		}
+		.odd{
+			background-color: lightgreen;
+			color: royalblue;
+		}
+	  </style>
+	</head>
+
+	<body>
+		<div class="container">
+			<div id="span2" class="odd">Box 1</div>
+			<div class="even">Box 2</div>
+			<div class="odd">Box 3</div>
+			<div class="even">Box 4</div>
+			<div id="rspan2" class="odd">Box 5</div>
+			<div class="even">Box 6</div>
+			<div class="odd">Box 7</div>
+			<div class="even">Box 8</div>
+		</div>
+		<a href="index.html">Lab 16 Home Page</a><br><br>
+	</body>
+</html>
+
+
+

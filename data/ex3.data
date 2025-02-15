@@ -1,5 +1,6 @@
 [
     ["John Smith", 30, "johndoe@example.com"],
     ["Jane Doe", 25, "janesmith@example.com"],
-    ["Sam Johnson", 35, "samjohnson@example.com"]
+    ["Sam Johnson", 35, "samjohnson@example.com"],
+    ["Sarah Duffy", 32, "sduffy@example.com"]
 ]

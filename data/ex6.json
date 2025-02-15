@@ -1,0 +1,8 @@
+{
+    "entries": [
+        { "key": "Name", "value": "Alice" },
+        { "key": "Age", "value": "30" },
+        { "key": "City", "value": "New York" },
+        { "key": "Occupation", "value": "Engineer" }
+    ]
+}

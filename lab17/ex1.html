@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+	<head>
+	  <meta charset="utf-8">
+	  <meta name="viewport" content="width=device-width, initial-scale=1" />		
+	  <title>Lecture 17 - Example 1</title>
+	  
+	</head>
+
+	<body>
+		<a href="index.html">Lab 17 Home Page</a><br><br>
+		
+		<script>
+			let data = [["John", 30, "Football"],
+						["Mary", 26, "Music"],
+						["Pat", 32, "Walking"]];
+			
+			let output = "<table>";
+			output += "<tr><th>Name</th><th>Age</th><th>Hobby</th></tr>"
+			for(let i = 0; i < data.length; i++){
+				output += "<tr>"
+				for(let j = 0; j < data[i].length; j++){
+					output += "<td>" + data[i][j] + "</td>";	
+				}
+				output += "</tr>"
+			}
+			output += "</table>";
+			
+			console.log(output);
+			document.write(output);
+		</script>
+	</body>
+</html>
+
+
+

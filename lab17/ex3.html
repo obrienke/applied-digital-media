@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+	<head>
+	  <meta charset="utf-8">
+	  <meta name="viewport" content="width=device-width, initial-scale=1" />		
+	  <title>Lecture 17 - Example 1</title>
+	  <style>
+		table, td, th {
+            border: 1px solid;
+        }  
+        table{
+            border-collapse: collapse;
+        }    
+	  </style>
+	</head>
+
+	<body> 
+        <a href="index.html">Lab 17 Home Page</a><br><br>
+        <button id="button1">Load Data</button>
+        <br>
+        <br>
+        <div id="output"></div>
+		
+		<script>
+			//let data = [["Jim", 4, "Toys"], ["Mary", 5, "Dolls"]]
+			function manageData(data){
+                let output = "<table>";
+			    output += "<tr><th>Name</th><th>Email</th></tr>"
+			    for(let i = 0; i < data.length; i++){
+				    output += "<tr>"
+				    output += "<td>" + data[i].name + "</td>"
+                    output += "<td>" + data[i].email + "</td>"
+				    output += "</tr>"
+			    }
+			    output += "</table>";
+			
+			    //console.log(output);
+			    //document.write(output);
+                document.getElementById("output").innerHTML = output;
+            }
+            document.getElementById("button1").addEventListener("click", async function(){
+                let url = "https://raw.githubusercontent.com/obrienke/applied-digital-media/refs/heads/main/data/mydata.json";
+                try{
+                    let response = await fetch(url)
+                    if(!response.ok){
+                        throw new Error("Issue getting file");
+                    }
+                    let data = await response.json(); 
+                    manageData(data);
+                } catch(error){
+                    console.error("An error occurred: " + error);
+                }
+            });
+			
+		</script>
+	</body>
+</html>

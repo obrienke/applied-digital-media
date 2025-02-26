@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 2</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 10px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+    <h2>Exercise 2</h2>
+    <div id="sampleData"></div>
+    <br><br>
+	<a href="index.html">Lecture 18 Home Page</a><br><br>
+    <script>
+
+        fetch("https://raw.githubusercontent.com/obrienke/applied-digital-media/refs/heads/main/data/sample1.json")
+            .then(function(response) {
+                return response.json();
+            })
+            .then(function(data) {
+                let output = "<p><b>Name:</b> " + data.name + "</p>";
+                output += "<p><b>Age:</b> " + data.age + "</p>";
+                output += "<p><b>City:</b> " + data.city + "</p>";
+                output += "<p><b>Married:</b> " + (data.married ? "Yes" : "No") + "</p>";
+                output += "<p><b>Hobbies:</b> " + data.hobbies.join(", ") + "</p>";
+                output += "<p><b>Street:</b> " + data.address.street + "</p>";
+                output += "<p><b>City:</b> " + data.address.city + "</p>";
+                output += "<p><b>Postal Code:</b> " + data.address.postal_code + "</p>";
+                
+                document.getElementById("sampleData").innerHTML = output;
+            })
+            .catch(function(error) {
+                console.error('Error loading JSON:', error);
+            });
+    </script>
+</body>
+</html>

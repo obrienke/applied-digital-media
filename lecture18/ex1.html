@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 1</title>
+    <style>
+        table, td, th {
+            border: 1px solid;
+        }  
+        table{
+            border-collapse: collapse;
+        }    
+    </style>
+</head>
+<body>
+    <h1>Exercise 1</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Email</th>
+            </tr>
+        </thead>
+        <tbody id="tabbod">
+        </tbody>
+    </table>
+    <br><br>
+	<a href="index.html">Lecture 18 Home Page</a><br><br>
+    <script>
+       
+        // Function to display the 2D array as a table
+        function displayData(data) {
+            let tableBody = document.getElementById("tabbod");
+            let bod = "";
+            // Loop through the 2D array and create a table row for each record
+            for(let i =0; i < data.length; i++){
+                bod += "<tr>"
+                for(let j = 0; j < data[i].length; j++){
+                    bod += "<td>" + data[i][j] + "</td>";
+                }
+                bod += "</tr>"
+            }
+            tableBody.innerHTML = bod;
+        }
+
+
+        addEventListener("load", async function () {
+            let url = "https://raw.githubusercontent.com/obrienke/applied-digital-media/refs/heads/main/data/ex1.data";
+            try {
+                let response = await fetch(url);
+                if (!response.ok) {
+                    throw new Error(`Network response was not ok: ${response.statusText}`);
+                }
+                let data = await response.json();
+                displayData(data);
+                
+            } catch (error) {
+                console.error("Error fetching data:", error);
+            }
+        });
+        
+
+    </script>
+</body>
+</html>

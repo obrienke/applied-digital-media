@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+	<head>
+	  <meta charset="utf-8">
+	  <meta name="viewport" content="width=device-width, initial-scale=1" />		
+	  <title>Lab 18 - Exercise 3</title>
+	  
+	</head>
+
+	<body>
+		<a href="index.html">Lab 18 Home Page</a><br><br>
+		<h1>Shopping List</h1>
+		<div id="output"></div>
+		<script>
+			addEventListener("load", loadList);
+			async function loadList(){
+				try{
+					let response = await fetch("https://raw.githubusercontent.com/obrienke/applied-digital-media/refs/heads/main/data/shopping-list.xml");
+					let data = await response.text();
+					let parser = new DOMParser();
+					let xmlDoc = parser.parseFromString(data, "text/xml");
+					let items = xmlDoc.getElementsByTagName("item");
+					let list = "<ol>"
+					for(let i = 0; i < items.length; i++){
+						list += "<li>" + items[i].textContent + "</li>";
+					}
+					list += "</ol>";
+					document.getElementById("output").innerHTML = list;
+				} catch(error){
+					console.error("Error loading XML:", error);
+				}
+			}
+		</script>
+	</body>
+</html>
+
+
+

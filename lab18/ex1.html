@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+	<head>
+	  <meta charset="utf-8">
+	  <meta name="viewport" content="width=device-width, initial-scale=1" />		
+	  <title>Lab 18 - Exercise 1</title>
+	  <style>
+		table{
+			width: 50%;
+			border-collapse: collapse;
+		}
+		th, td{
+			border: 1px solid black;
+			padding: 10px;
+			text-align: left;
+		}
+		th{
+			background-color: rgb(246, 235, 235);
+		}
+	  </style>
+	</head>
+
+	<body>
+		<a href="index.html">Lab 18 Home Page</a><br><br>
+		<h1>Exercise 1</h1>
+		<div id="output"></div>
+		<script>
+		fetch("https://raw.githubusercontent.com/obrienke/applied-digital-media/refs/heads/main/data/lab18_ex1.json")
+			.then(function(response){
+				return response.json();
+			})
+			.then(function(data){
+				let table = "<table><tr><th>Key</th><th>Value</th></tr>";
+				for(let i = 0; i < data.entries.length; i++){
+					table += "<tr><td>"+data.entries[i].key+"</td><td>"+data.entries[i].value+"</td></tr>"
+				}
+				table += "</table>";
+				//console.log(table); 
+				document.getElementById("output").innerHTML = table;		
+			})
+			.catch(function(error){
+				console.error("Error loading JSON", error);
+			});			
+		</script>
+	</body>
+</html>
+
+
+

@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+	<head>
+	  <meta charset="utf-8">
+	  <meta name="viewport" content="width=device-width, initial-scale=1" />		
+	  <title>Lab 18 - Exercise 2</title>
+	  <style>
+		table{
+			width: 50%;
+			border-collapse: collapse;
+		}
+		th, td{
+			border: 1px solid black;
+			padding: 10px;
+			text-align: left;
+		}
+		th{
+			background-color: rgb(246, 235, 235);
+		}
+	  </style>
+	</head>
+
+	<body>
+		<a href="index.html">Lab 18 Home Page</a><br><br>
+		<h1>Shopping List</h1>
+		<div id="output"></div>
+		<script>
+		fetch("https://raw.githubusercontent.com/obrienke/applied-digital-media/refs/heads/main/data/sample2.json")
+			.then(function(response){
+				return response.json();
+			})
+			.then(function(data){
+				let output = "";
+				for(categories in data.shoppingList){
+					output += generateTable(categories, data.shoppingList[categories]);
+				}	
+				function generateTable(category, items){
+					let table = "<h3>" + category + "</h3>";
+					table += "<table><tr><th>Item</th><th>Quantity</th><th>Unit</th></tr>"
+					for(let i = 0; i < items.length; i++){
+						table += "<tr><td>"+items[i].item+"</td><td>"+items[i].quantity+"</td><td>"+items[i].unit+"</td></tr>";
+					}
+					table += "</table>"
+					return table; 
+				}
+				document.getElementById("output").innerHTML = output;	
+			})
+			.catch(function(error){
+				console.error("Error loading JSON", error);
+			});		
+		
+		</script>
+	</body>
+</html>
+
+
+

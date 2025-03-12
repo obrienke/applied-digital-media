@@ -1,0 +1,11 @@
+.nav_bg{
+    background-color: rgb(84, 154, 178);
+}
+
+.a_fg{
+    color: white;
+}
+
+.a_active{
+    text-decoration: underline;
+}

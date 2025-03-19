@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+	<head>
+	  <meta charset="utf-8">
+	  <meta name="viewport" content="width=device-width, initial-scale=1" />		
+	  <title>Lecture 21 - Example 1 - Session Storage</title>
+	</head>
+
+	<body>
+		<h2>Web Storage - Session</h2>
+		<p>Open this file in a browser. Check session storage - open dev tools (press f12 key), and select application to see sessionStorage storage.</p> 
+		<p>Then close the browser session for this page. Comment out the JavaScript below. Then reopen this file in the same browser. Check session storage - open dev tools (press f12 key), and select application to see session storage. Address key should no longer exist.</p>
+		<a href="index.html">Lecture 21 Home Page</a><br><br>
+		<script>
+			sessionStorage.name = "John";
+			console.log(sessionStorage.name);
+			console.log(sessionStorage.key(0));
+			console.log(sessionStorage.getItem("name"));
+			console.log(sessionStorage.getItem(sessionStorage.key(0)));
+			sessionStorage.setItem("Address", "Galway");
+			
+			function output(){
+				for(let i = 0; i < sessionStorage.length; i++){
+					console.log("from loop: " + sessionStorage.getItem(sessionStorage.key(i)))
+				}
+			}
+			
+			output();
+
+			sessionStorage.removeItem("name");
+			console.log("removed name")
+			output();
+			//sessionStorage.clear();
+			//console.log("removed all")
+			//output();
+		</script>
+	</body>
+</html>
+
+
+

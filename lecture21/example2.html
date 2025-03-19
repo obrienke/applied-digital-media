@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+	<head>
+	  <meta charset="utf-8">
+	  <meta name="viewport" content="width=device-width, initial-scale=1" />		
+	  <title>Lecture 21 - Example 2 - Local Storage</title>
+	  
+	</head>
+
+	<body>
+		<h2>Web Storage - Local</h2>
+		<p>Open this file in a browser. Check local storage - open dev tools (press f12 key), and select application to see local storage.</p> 
+		<p>Then close the browser session for this page. Comment out the JavaScript below. Then reopen this file in the same browser. Check local storage - open dev tools (press f12 key), and select application to see local storage. Address key should still exist. If you wish to clear local storage, just uncomment last line and refresh the page in the browser.</p>
+		<a href="index.html">Lecture 21 Home Page</a><br><br>
+		<script>
+			localStorage.name = "John";
+			console.log(localStorage.name);
+			console.log(localStorage.key(0));
+			console.log(localStorage.getItem("name"));
+			console.log(localStorage.getItem(localStorage.key(0)));
+			localStorage.setItem("Address", "Galway");
+			
+			function output(){
+				for(let i = 0; i < localStorage.length; i++){
+					console.log("from loop: " + localStorage.getItem(localStorage.key(i)))
+				}
+			}
+			
+			output();
+
+			localStorage.removeItem("name");
+			console.log("removed name")
+			output();
+			
+			//localStorage.clear();
+		</script>
+	</body>
+</html>
+
+
+

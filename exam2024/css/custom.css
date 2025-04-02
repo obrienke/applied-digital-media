@@ -1,0 +1,30 @@
+.btn-primary{
+    background-color: maroon;
+    border: 2px solid transparent;
+}
+.carousel{
+    width: 100%;
+    margin: auto;
+    color: white;
+    background: maroon;
+}
+.carousel-item{
+    padding: 80px;
+}
+.navbar{
+    background: maroon;
+}
+
+.p-5{
+    border-radius: 20px;
+    background-image: url("../img/elephant.jpg");
+    background-position: bottom;
+}
+
+.p-5 > h1, .p-5 > p{
+    background: maroon;
+}
+
+.card-body{
+    background-color: maroon;
+}

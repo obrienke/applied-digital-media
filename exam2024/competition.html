@@ -26,48 +26,45 @@
                   <li class="nav-item">
                     <a class="nav-link text-white text-decoration-underline fw-bold" href="#">Competition</a>
                   </li>
-                  <li class="nav-item">
-                    <a class="nav-link text-white" href="../index.html">Applied Digital Media Home Page</a>
-                  </li>
+                  
                 </ul>
               </div>
             </div>
           </nav>
 
-          <form>
+          <form onsubmit="quiz()">
             <h3>Complete the quiz below to retrieve a code which you can quote on entering Galway Zoo to recieve a discount on your entrance fee.</h3>
 
             <div class="mb-3">
               <label for="q1" class="form-label">Q1. Which animal is known to spend 90% of its day sleeping?</label>
               
               <div class="form-check">
-                <input class="form-check-input" type="radio" name="q1" id="q1a1">
+                <input class="form-check-input question1" type="radio" name="q1" id="q1a1">
                 <label class="form-check-label" for="q1a1">
                   Lions
                 </label>
               </div>
 
               <div class="form-check">
-                <input class="form-check-input" type="radio" name="q1" id="q1a2">
+                <input class="form-check-input question1" type="radio" name="q1" id="q1a2">
                 <label class="form-check-label" for="q1a2">
                   Donkeys
                 </label>
               </div>
 
               <div class="form-check">
-                <input class="form-check-input" type="radio" name="q1" id="q1a3">
+                <input class="form-check-input question1" type="radio" name="q1" id="q1a3">
                 <label class="form-check-label" for="q1a3">
                   Koalas
                 </label>
               </div>
 
               <div class="form-check">
-                <input class="form-check-input" type="radio" name="q1" id="q1a4">
+                <input class="form-check-input question1" type="radio" name="q1" id="q1a4">
                 <label class="form-check-label" for="q1a4">
                   Elephants
                 </label>
               </div>
-
 
             </div>
 
@@ -75,40 +72,38 @@
               <label for="q2" class="form-label">Q2. What colour is the tongue of a giraffe?</label>
               
               <div class="form-check">
-                <input class="form-check-input" type="radio" name="q2" id="q2a1">
+                <input class="form-check-input question2" type="radio" name="q2" id="q2a1">
                 <label class="form-check-label" for="q2a1">
                   Purple
                 </label>
               </div>
 
               <div class="form-check">
-                <input class="form-check-input" type="radio" name="q2" id="q2a2">
+                <input class="form-check-input question2" type="radio" name="q2" id="q2a2">
                 <label class="form-check-label" for="q2a2">
                   Green
                 </label>
               </div>
 
               <div class="form-check">
-                <input class="form-check-input" type="radio" name="q2" id="q2a3">
+                <input class="form-check-input question2" type="radio" name="q2" id="q2a3">
                 <label class="form-check-label" for="q2a3">
                   Red
                 </label>
               </div>
 
               <div class="form-check">
-                <input class="form-check-input" type="radio" name="q2" id="q2a4">
+                <input class="form-check-input question2" type="radio" name="q2" id="q2a4">
                 <label class="form-check-label" for="q2a4">
                   Orange
                 </label>
               </div>
-
-
             </div>
-
             <button type="submit" class="btn btn-primary">Submit</button>
           </form>
 
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="js/competition.js"></script>
   </body>
 </html>

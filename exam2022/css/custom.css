@@ -1,0 +1,11 @@
+.navbar{
+    padding-left: 20px;
+}
+
+.p-4{
+    border-radius: 30px;
+}
+
+.col-md-6, .list-group, .navbar{
+    margin-bottom: 20px;
+}

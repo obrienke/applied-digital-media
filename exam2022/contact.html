@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Contact page</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+    <link href="css/custom.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="container">
+        <nav class="navbar navbar-expand-md navbar-dark bg-primary">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="#">Local Sports</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="index.html">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" href="#">Contact</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="about.html">About</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link text-white" href="../index.html">Applied Digital Media Home Page</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+          <h2>Contact us</h2>
+          <p>Enter your details in the form below and click Submit to contact us.</p>
+          <form>
+            <div class="mb-3">
+              <label for="first" class="form-label">First Name</label>
+              <input type="text" class="form-control" id="first" placeholder="Enter first name">
+            </div>
+            <div class="mb-3">
+                <label for="last" class="form-label">Surname</label>
+                <input type="text" class="form-control" id="last" placeholder="Enter last name">
+            </div>
+            <div class="mb-3">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" class="form-control" id="email" placeholder="Enter email">
+            </div>
+            <div class="mb-3">
+                <label for="msg" class="form-label">Message</label>
+                <br>
+                <textarea class="form-control" id="msg"></textarea>
+            </div>
+            
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </form>
+
+    </div>  
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
+  </body>
+</html>

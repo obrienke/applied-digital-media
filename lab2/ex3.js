@@ -1,0 +1,1 @@
+document.write("<p>A paragraph</p><button>A button</button>");

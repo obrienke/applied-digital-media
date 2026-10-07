@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Lecture 4</title>
+    </head>
+    <body>
+        <h1>Lecture 4 - Loops</h1>
+        <div id="headers"></div>
+        <div id="fib"></div>
+        <br>
+        <a href="../index.html">Home Page</a>
+        <script>
+            let counter = 1;
+            let total = 0;
+            while(counter <= 5){
+                let number = prompt("Enter number " + counter);
+                total += +number;
+                counter++;
+            }
+            alert(total);
+            let heads = "";
+            for(let i = 1; i <= 2; i++){
+                heads += "<h"+i+">Level Heading "+i+"<h"+i+">"
+            }
+            document.getElementById("headers").innerHTML = heads;
+
+            total = 0;
+            heads = 0
+            counter = 1;
+            do{
+                total++;
+                heads += total 
+                counter++
+            }while(counter <= 3);
+            alert("1 + 2 + 3 = " + heads)
+
+            let fib_seq = "";
+            let first = 0;
+            let second = 1;
+            fib_seq = first +", " + second;
+
+            for(let i = 2; i <= 10; i++){
+                let next = first + second;
+                fib_seq += ", " + next;
+                first = second;
+                second = next;
+            }
+            document.getElementById("fib").textContent = fib_seq;
+
+        </script>
+        
+    </body>
+</html>

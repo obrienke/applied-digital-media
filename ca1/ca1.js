@@ -43,4 +43,50 @@ do{
     }
 }while(notOk);
 
+let width = 0;
+notOk = true;
+do{
+    width = prompt("Enter width");
+    if(width < 1 || width > 10){
+        alert("Width must be a value from 1 to 10 - Please re-enter");
+    }else{
+        notOk = false;
+    }
+}while(notOk);
 
+let area = width * length;
+
+document.getElementById("q5_ans").textContent = "Area is: " + area;
+
+let rectangle = "";
+for(let i = 1; i <= width; i++){
+    for(let j = 1; j <= length; j++){
+        rectangle += "* " 
+    }
+    rectangle += "<br>";
+}
+
+document.getElementById("rectangle").innerHTML = rectangle;
+
+// Question 6
+let rows = 0;
+while(true){
+    rows = prompt("Enter number of rows (2 to 9) for Triangle");
+    if(rows < 2 || rows > 9){
+        alert("Number of rows must be a value from 2 to 9 inclusive");
+    }else{
+        break;
+    }
+}
+
+let triangle = "";
+let count = 0;
+for(let i = 1; i <= rows; i++){
+    for(let j = 1; j <= i; j++){
+        triangle += "* "
+        count++;
+    }
+    triangle += "<br>";
+}
+document.getElementById("triangle").innerHTML = triangle;
+document.getElementById("stars").textContent = "Total number of asterisks printed is " + count;
